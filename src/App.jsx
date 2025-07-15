@@ -8,7 +8,7 @@ export const App = () => {
 
 	return (
 		<Div>
-		<i className="fa fa-envelope" aria-hidden="true"></i>
+		<i className="fa fa-desktop" aria-hidden="true"></i>
 		<div>123</div>
 		</Div>
 	);
