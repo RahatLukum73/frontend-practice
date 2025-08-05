@@ -1,41 +1,69 @@
-import { Icon } from '../../../../components';
+import { Icon, Button } from '../../../../components';
 import { Link, useNavigate } from 'react-router-dom';
+import { ROLE } from '../../../../constans/role';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+	selectUserRole,
+	selectUserLogin,
+	selectUserSession,
+} from '../../../../selectors';
+import { logout } from '../../../../actions';
 import styled from 'styled-components';
 
 const RightAligned = styled.div`
 	display: flex;
 	justify-content: flex-end;
+	align-items: center;
 `;
 
-const StyledLink = styled(Link)`
+const StyledIcon = styled.div`
+	&:hover {
+		cursor: pointer;
+	}
+`;
+
+const UserName = styled.div`
+	font-size: 16px;
+	font-weight: bold;
+`;
+
+const Wrapper = styled.div`
 	display: flex;
 	justify-content: center;
-	font-size: 18px;
-	width: 100px;
-	height: 32px;
-	border: 1px solid #000;
-	border-radius: 5px;
-	background: #eee;
-`;
-
-const StyledButton = styled.div`
-	&:hover {
-	cursor: pointer;
-}
+	align-items: center;
+	margin: -3px 0 0 0;
 `;
 
 const ControlPanelContainer = ({ className }) => {
 	const navigate = useNavigate();
-
+	const dispatch = useDispatch();
+	const roleId = useSelector(selectUserRole);
+	const login = useSelector(selectUserLogin);
+	const session = useSelector(selectUserSession);
 	return (
 		<div className={className}>
 			<RightAligned>
-				<StyledLink to="/login">Войти</StyledLink>
+				{roleId === ROLE.GUEST ? (
+					<Button>
+						<Link to="/login">Войти</Link>
+					</Button>
+				) : (
+					<Wrapper>
+						<UserName>{login}</UserName>
+						<StyledIcon>
+							<Icon
+								id="fa-sign-out"
+								margin=" 0 0 0 10px"
+								onClick={() => dispatch(logout(session))}
+							/>
+						</StyledIcon>
+					</Wrapper>
+				)}
 			</RightAligned>
 			<RightAligned>
-				<StyledButton onClick={() => navigate(-1)}>
+				<StyledIcon onClick={() => navigate(-1)}>
 					<Icon id="fa-backward" margin="10px 0 0 0" />
-				</StyledButton>
+				</StyledIcon>
 				<Link to="/post">
 					<Icon id="fa-file-text-o" margin="10px 0 0 15px" />
 				</Link>
@@ -47,4 +75,5 @@ const ControlPanelContainer = ({ className }) => {
 	);
 };
 
-export const ControlPanel = styled(ControlPanelContainer)``;
+export const ControlPanel = styled(ControlPanelContainer)`
+`;

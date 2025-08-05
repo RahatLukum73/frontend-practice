@@ -1,6 +1,16 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
+const Temperature = styled.div`
+display: inline-block;
+background-color: #bbb;
+color: #fff;
+padding:0 5px;
+border: 1px solid #999;
+border-radius: 5px;
+
+`;
+
 const FooterContainer = ({ className }) => {
 	const [city, setCity] = useState('');
 	const [temperature, setTemperature] = useState('');
@@ -16,7 +26,7 @@ const FooterContainer = ({ className }) => {
 				setTemperature(Math.round(main.temp));
 				setWeather(weather[0].description);
 			});
-	});
+	}, []);
 	return (
 		<div className={className}>
 			<div>
@@ -25,11 +35,11 @@ const FooterContainer = ({ className }) => {
 			</div>
 			<div>
 				<div>
-					{new Date().toLocaleString('ru', { day: 'numeric', month: 'long' })},{' '}
-					{city}
+					{temperature}°, {weather}
 				</div>
 				<div>
-					{temperature} градусов, {weather}
+					<Temperature>{new Date().toLocaleString('ru', { day: 'numeric', month: 'long' })}</Temperature>{' '}
+					{city}
 				</div>
 			</div>
 		</div>
