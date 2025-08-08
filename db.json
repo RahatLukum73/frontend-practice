@@ -1,52 +1,17 @@
 {
   "users": [
     {
-      "id": "001",
+      "id": "c10e",
       "login": "Vladimir",
-      "password": "qwerty123",
-      "regitered_at": "2050-09-22",
+      "password": "qwe123",
+      "registered_at": "2053-01-12 07:34",
       "role_id": 0
     },
     {
-      "id": "7216",
-      "login": "Vova",
-      "password": "qwe123",
-      "registed_at": "2047-02-19 03:06",
-      "role_id": 2
-    },
-    {
-      "id": "9e49",
-      "login": "RahatLukum73",
-      "password": "qwe123",
-      "registed_at": "2050-07-12 12:38",
-      "role_id": 2
-    },
-    {
-      "id": "482d",
-      "login": "iliya",
-      "password": "123qwe",
-      "registed_at": "2044-08-19 23:43",
-      "role_id": 2
-    },
-    {
-      "id": "21bf",
-      "login": "rtrtrt",
-      "password": "123456",
-      "registed_at": "2063-04-20 14:10",
-      "role_id": 2
-    },
-    {
-      "id": "68ec",
-      "login": "ivan",
-      "password": "qwe123",
-      "registed_at": "2041-07-01 17:34",
-      "role_id": 2
-    },
-    {
-      "id": "403e",
-      "login": "oleg",
-      "password": "qwe123",
-      "registed_at": "2049-06-09 13:15",
+      "id": "6402",
+      "login": "Nafis",
+      "password": "qweasd",
+      "registered_at": "2049-10-30 13:59",
       "role_id": 2
     }
   ],
