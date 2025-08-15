@@ -69,6 +69,7 @@ useResetForm(reset);
 			}
 
 			dispatch(setUser(res));
+			sessionStorage.setItem('userData', JSON.stringify(res))
 		});
 	};
 	const formError =

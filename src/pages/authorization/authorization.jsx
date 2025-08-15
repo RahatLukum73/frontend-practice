@@ -60,7 +60,7 @@ export const AuthorizationContainer = ({ className }) => {
 
 	const roleId = useSelector(selectUserRole);
 
-useResetForm(reset);
+	useResetForm(reset);
 
 	const onSubmit = ({ login, password }) => {
 		server.authorize(login, password).then(({ error, res }) => {
@@ -70,14 +70,15 @@ useResetForm(reset);
 			}
 
 			dispatch(setUser(res));
+			sessionStorage.setItem('userData', JSON.stringify(res))
 		});
 	};
 	const formError = errors?.login?.message || errors?.password?.message;
 	const errorMessage = formError || serverError;
 
-	if(roleId !== ROLE.GUEST) {
-		return <Navigate to="/" />
-	};
+	if (roleId !== ROLE.GUEST) {
+		return <Navigate to="/" />;
+	}
 
 	return (
 		<div className={className}>
