@@ -35,11 +35,11 @@ const CommentContainer = ({
 			<div className="comment">
 				<div className="information-panel">
 					<div className="author">
-						<Icon id="fa-user-circle-o" size="18px" margin="0 5px 0 0" />
+						<Icon id="fa-user-circle-o" inactive={true} size="18px" margin="0 5px 0 0" />
 						{author}
 					</div>
 					<div className="published-at">
-						<Icon id="fa-calendar-o" size="18px" margin="0 5px 0 0" />
+						<Icon id="fa-calendar-o" inactive={true} size="18px" margin="0 5px 0 0" />
 						{publishedAt}
 					</div>
 				</div>
