@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Comments, PostContent, PostForm } from './components';
 import { useServerRequest } from '../../hooks';
 import { RESET_POST_DATA, loadPostAsync } from '../../actions';
-// import { initialPostState } from '../../reducers/post-reducer';
 import { selectPost } from '../../selectors';
 import styled from 'styled-components';
 
@@ -26,7 +25,6 @@ const PostContainer = ({ className }) => {
 		}
 		dispatch(loadPostAsync(requestServer, params.id));
 	}, [dispatch, requestServer, params.id, isCreating]);
-console.log(post)
 	return (
 		<div className={className}>
 			{isCreating || isEditing ? (
