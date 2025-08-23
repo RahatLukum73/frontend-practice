@@ -48,11 +48,13 @@ const PostFormContainer = ({
 				value={imageUrlValue}
 				placeholder="Изображение..."
 				onChange={onImageChange}
+				padding="0 10px"
 			/>
 			<Input
 				value={titleValue}
 				placeholder="Заголовок..."
 				onChange={onTitleChange}
+				padding="0 10px"
 			/>
 			<SpecialPanel
 				id={id}
@@ -84,7 +86,7 @@ export const PostForm = styled(PostFormContainer)`
 		border-radius: 5px;
 		font-size: 18px;
 		margin: 10px 0 0 0;
-		padding: 0 5px;
+		padding: 10px 10px;
 		white-space: pre-line;
 	}
 `;

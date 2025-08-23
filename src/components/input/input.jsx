@@ -13,7 +13,7 @@ export const Input = styled(InputContainer)`
 	height: 40px;
 	font-size: 18px;
 	margin: 0 0 10px;
-	padding: 10px;
+	padding: ${({padding = '0'}) => padding};
 	border: 1px solid #000;
 	border-radius: 5px;
 `;
