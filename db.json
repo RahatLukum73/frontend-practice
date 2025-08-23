@@ -175,6 +175,13 @@
       "post_id": "002",
       "published_at": "2035-04-24 22:35",
       "content": "My first comment 4"
+    },
+    {
+      "id": "617c",
+      "author_id": "c10e",
+      "post_id": "3f8f",
+      "published_at": "2060-07-16 02:56",
+      "content": "hello"
     }
   ],
   "sessions": [
@@ -232,6 +239,28 @@
         "registeredAt": "2053-01-12 07:34",
         "roleId": 0
       }
+    },
+    {
+      "id": "d38a",
+      "hash": "0.35166280154537865598740609129890799522399902343750",
+      "user": {
+        "id": "c10e",
+        "login": "Vladimir",
+        "password": "qwe123",
+        "registeredAt": "2053-01-12 07:34",
+        "roleId": 0
+      }
+    },
+    {
+      "hash": "0.48597782653906451688641254804679192602634429931641",
+      "user": {
+        "id": "c10e",
+        "login": "Vladimir",
+        "password": "qwe123",
+        "registeredAt": "2053-01-12 07:34",
+        "roleId": 0
+      },
+      "id": "Fa5UosW"
     }
   ]
 }
