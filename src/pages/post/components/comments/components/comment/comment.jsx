@@ -8,6 +8,7 @@ import {
 } from '../../../../../../actions';
 import { selectUserRole } from '../../../../../../selectors';
 import { ROLE } from '../../../../../../constans';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const CommentContainer = ({
@@ -87,3 +88,11 @@ export const Comment = styled(CommentContainer)`
 		align-items: center;
 	}
 `;
+
+Comment.propTypes = {
+	postId: PropTypes.string.isRequired,
+	id: PropTypes.string.isRequired,
+	author: PropTypes.string.isRequired,
+	content: PropTypes.string.isRequired,
+	publishedAt: PropTypes.string.isRequired,
+}

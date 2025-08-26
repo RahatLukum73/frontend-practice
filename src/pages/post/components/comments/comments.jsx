@@ -5,7 +5,8 @@ import { Icon } from '../../../../components';
 import { useServerRequest } from '../../../../hooks';
 import { selectUserId, selectUserRole } from '../../../../selectors';
 import { addCommentAsync } from '../../../../actions';
-import { ROLE } from '../../../../constans';
+import { PROP_TYPE, ROLE } from '../../../../constans';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const CommentsContainer = ({ className, comments, postId }) => {
@@ -75,3 +76,8 @@ export const Comments = styled(CommentsContainer)`
 		margin-top: 30px
 		}
 `;
+
+Comments.propTypes = {
+	comments: PropTypes.arrayOf(PROP_TYPE.COMMENT),
+	postId: PropTypes.string.isRequired,
+}
