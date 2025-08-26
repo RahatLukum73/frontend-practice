@@ -22,6 +22,10 @@ export const Pagination = styled(PaginationContainer)`
 	margin: 0 0 10px;
 	padding: 0 35px;
 
+	& button {
+	margin: 0 5px;
+	}
+
 	& .current-page {
 	width: 100%;
 	height: 32px;
@@ -29,5 +33,6 @@ export const Pagination = styled(PaginationContainer)`
 	font-weight: 500;
 	text-align: center;
 	border: 1px solid #000;
+	margin: 0 5px;
 	}
 `;

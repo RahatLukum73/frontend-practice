@@ -8,7 +8,6 @@ import { RESET_POST_DATA, loadPostAsync } from '../../actions';
 import { selectPost } from '../../selectors';
 import { ROLE } from '../../constans';
 import styled from 'styled-components';
-import { server } from '../../bff';
 
 const PostContainer = ({ className }) => {
 	const [error, setError] = useState(null);
@@ -19,6 +18,7 @@ const PostContainer = ({ className }) => {
 	const isEditing = !!useMatch('/post/:id/edit');
 	const requestServer = useServerRequest();
 	const post = useSelector(selectPost);
+	
 
 	useLayoutEffect(() => {
 		dispatch(RESET_POST_DATA);
@@ -38,6 +38,8 @@ const PostContainer = ({ className }) => {
 	if (isLoading) {
 		return null;
 	}
+
+	
 
 	const SpecificPostPage =
 		isCreating || isEditing ? (
