@@ -18,7 +18,7 @@ const FooterContainer = ({ className }) => {
 
 	useEffect(() => {
 		fetch(
-			'https://api.openweathermap.org/data/2.5/weather?q=Ulyanovsk&units=metric&lang=ru&appid=373518e227b91f05f2fd6aa6d16f388e'
+			`https://api.openweathermap.org/data/2.5/weather?q=Ulyanovsk&units=metric&lang=ru&appid=${import.meta.env.VITE_WEATHER_API_KEY}`
 		)
 			.then((res) => res.json())
 			.then(({ name, main, weather }) => {
